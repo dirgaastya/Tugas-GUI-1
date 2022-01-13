@@ -17,7 +17,7 @@ public class GUI3 {
     public static void main(String[] args) {
         // TODO code application logic here
         Home b = new Home();
-        Calculator c = new Calculator();
+        CustomsCalc c = new CustomsCalc();
         
         
         b.setVisible(true);
