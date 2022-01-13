@@ -196,7 +196,7 @@
         <Component class="javax.swing.JButton" name="btnExit">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\728918_cancel_error_exit_fault_alert_icon.png"/>
+              <Image iconType="3" name="/gui3/img/728918_cancel_error_exit_fault_alert_icon.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -214,7 +214,7 @@
         <Component class="javax.swing.JButton" name="btnBack">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(7).png"/>
+              <Image iconType="3" name="/gui3/img/image(7).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -232,7 +232,7 @@
         <Component class="javax.swing.JButton" name="btnInfo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(9).png"/>
+              <Image iconType="3" name="/gui3/img/image(9).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

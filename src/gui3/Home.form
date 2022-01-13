@@ -153,7 +153,7 @@
         <Component class="javax.swing.JButton" name="btnCalc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\taxes.png"/>
+              <Image iconType="3" name="/gui3/img/taxes.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -172,7 +172,7 @@
         <Component class="javax.swing.JButton" name="btnCurrency">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\5027850_dollar_money_paper_icon.png"/>
+              <Image iconType="3" name="/gui3/img/5027850_dollar_money_paper_icon.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -191,7 +191,7 @@
         <Component class="javax.swing.JButton" name="btnExit">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\728918_cancel_error_exit_fault_alert_icon.png"/>
+              <Image iconType="3" name="/gui3/img/728918_cancel_error_exit_fault_alert_icon.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -221,7 +221,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(9).png"/>
+              <Image iconType="3" name="/gui3/img/image(9).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

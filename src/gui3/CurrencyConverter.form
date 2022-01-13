@@ -159,7 +159,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\indonesian-rupiah.png"/>
+              <Image iconType="3" name="/gui3/img/indonesian-rupiah.png"/>
             </Property>
           </Properties>
         </Component>
@@ -187,7 +187,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\dollar-symbol.png"/>
+              <Image iconType="3" name="/gui3/img/dollar-symbol.png"/>
             </Property>
           </Properties>
         </Component>
@@ -214,7 +214,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\indonesian-rupiah.png"/>
+              <Image iconType="3" name="/gui3/img/indonesian-rupiah.png"/>
             </Property>
           </Properties>
         </Component>
@@ -242,7 +242,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\dollar-symbol.png"/>
+              <Image iconType="3" name="/gui3/img/dollar-symbol.png"/>
             </Property>
           </Properties>
         </Component>
@@ -272,7 +272,7 @@
               <Color blue="dc" green="cc" red="bc" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(6).png"/>
+              <Image iconType="3" name="/gui3/img/image(6).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -293,7 +293,7 @@
               <Color blue="dc" green="cc" red="bc" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(6).png"/>
+              <Image iconType="3" name="/gui3/img/image(6).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -329,7 +329,7 @@
         <Component class="javax.swing.JButton" name="btnBack">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(7).png"/>
+              <Image iconType="3" name="/gui3/img/image(7).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -347,7 +347,7 @@
         <Component class="javax.swing.JButton" name="btnInfo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Taufik Yahya\Downloads\image(9).png"/>
+              <Image iconType="3" name="/gui3/img/image(9).png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

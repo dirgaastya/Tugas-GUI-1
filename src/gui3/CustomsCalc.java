@@ -67,7 +67,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         jLabel1.setText("estimated customs calculation");
         jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
 
-        btnExit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\728918_cancel_error_exit_fault_alert_icon.png")); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/728918_cancel_error_exit_fault_alert_icon.png"))); // NOI18N
         btnExit.setBorder(null);
         btnExit.setBorderPainted(false);
         btnExit.setContentAreaFilled(false);
@@ -78,7 +78,7 @@ public class CustomsCalc extends javax.swing.JFrame {
             }
         });
 
-        btnBack.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\image(7).png")); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(7).png"))); // NOI18N
         btnBack.setBorder(null);
         btnBack.setBorderPainted(false);
         btnBack.setContentAreaFilled(false);
@@ -89,7 +89,7 @@ public class CustomsCalc extends javax.swing.JFrame {
             }
         });
 
-        btnInfo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\image(9).png")); // NOI18N
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(9).png"))); // NOI18N
         btnInfo.setBorder(null);
         btnInfo.setBorderPainted(false);
         btnInfo.setContentAreaFilled(false);
@@ -417,8 +417,13 @@ public class CustomsCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
+       int option = JOptionPane.showConfirmDialog(null, "Do you want to exit the program ?","Application",JOptionPane.YES_NO_OPTION);
+        switch(option){
+            case JOptionPane.YES_OPTION:
+                System.exit(0);
+            case JOptionPane.NO_OPTION:
+                break;
+        }
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void txtShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtShipActionPerformed

@@ -58,7 +58,7 @@ public class Home extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(240, 244, 248));
         jLabel3.setText("CURRENCY CONVERTER");
 
-        btnCalc.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\taxes.png")); // NOI18N
+        btnCalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/taxes.png"))); // NOI18N
         btnCalc.setBorder(null);
         btnCalc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCalc.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +67,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        btnCurrency.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\5027850_dollar_money_paper_icon.png")); // NOI18N
+        btnCurrency.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/5027850_dollar_money_paper_icon.png"))); // NOI18N
         btnCurrency.setBorder(null);
         btnCurrency.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCurrency.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        btnExit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\728918_cancel_error_exit_fault_alert_icon.png")); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/728918_cancel_error_exit_fault_alert_icon.png"))); // NOI18N
         btnExit.setBorder(null);
         btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExit.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(240, 244, 248));
         jLabel4.setText("overseas online shopping");
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\image(9).png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(9).png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setContentAreaFilled(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -194,7 +194,13 @@ public class Home extends javax.swing.JFrame {
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        int option = JOptionPane.showConfirmDialog(null, "Do you want to exit the program ?","Application",JOptionPane.YES_NO_OPTION);
+        switch(option){
+            case JOptionPane.YES_OPTION:
+                System.exit(0);
+            case JOptionPane.NO_OPTION:
+                break;
+        }
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
