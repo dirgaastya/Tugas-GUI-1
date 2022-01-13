@@ -85,6 +85,11 @@ public class CurrencyConverter extends javax.swing.JFrame {
         txtDollar2.setForeground(new java.awt.Color(240, 244, 248));
         txtDollar2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
         txtDollar2.setOpaque(false);
+        txtDollar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDollar2ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\dollar-symbol.png")); // NOI18N
 
@@ -260,6 +265,15 @@ public class CurrencyConverter extends javax.swing.JFrame {
 
     private void txtRp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRp1ActionPerformed
         // TODO add your handling code here:
+        String a = txtRp1.getText();
+        
+        int rpOne = Integer.parseInt(a);
+//        Hitung dan merubah format Decimal menggunakan DecimalFormat
+        Double result = rpOne * 0.00007;
+        DecimalFormat formatter = new DecimalFormat("#0.00");
+        String resultStr = formatter.format(result);
+  
+        txtDollar1.setText("$ " + resultStr);
     }//GEN-LAST:event_txtRp1ActionPerformed
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
@@ -287,6 +301,17 @@ public class CurrencyConverter extends javax.swing.JFrame {
         String resultStr = formatter.format(result);
         txtRp2.setText("RP. " + resultStr);
     }//GEN-LAST:event_BtnEnter2ActionPerformed
+
+    private void txtDollar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDollar2ActionPerformed
+        String a = txtDollar2.getText();
+        
+        double dollar=Double.parseDouble(a);
+        
+        Double result = dollar * 14310.04;
+        DecimalFormat formatter = new DecimalFormat("#0.00");
+        String resultStr = formatter.format(result);
+        txtRp2.setText("RP. " + resultStr);
+    }//GEN-LAST:event_txtDollar2ActionPerformed
 
     /**
      * @param args the command line arguments

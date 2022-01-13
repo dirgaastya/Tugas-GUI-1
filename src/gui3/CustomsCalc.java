@@ -5,6 +5,7 @@
  */
 package gui3;
 
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,7 +37,25 @@ public class CustomsCalc extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
         btnInfo = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        selectType = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        txtPrice = new javax.swing.JTextField();
+        txtRp = new javax.swing.JTextField();
+        txtTtax = new javax.swing.JTextField();
+        txtTpay = new javax.swing.JTextField();
+        txtShip = new javax.swing.JTextField();
+        txtTax = new javax.swing.JTextField();
+        txtVat = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -85,7 +104,126 @@ public class CustomsCalc extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(240, 244, 248));
         jLabel2.setText("type");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        selectType.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        selectType.setForeground(new java.awt.Color(68, 68, 68));
+        selectType.setMaximumRowCount(3);
+        selectType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Common", "Textile / Bag", "Shoes" }));
+        selectType.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel3.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel3.setText("price ");
+
+        jLabel4.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel4.setText("idr price (+ shipping)");
+
+        jLabel5.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel5.setText("Shipping cost");
+
+        jLabel6.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel6.setText("vat");
+
+        jLabel7.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel7.setText("tax");
+
+        jLabel8.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel8.setText("Total tax component");
+
+        jLabel9.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel9.setText("total payment");
+
+        txtPrice.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtPrice.setForeground(new java.awt.Color(240, 244, 248));
+        txtPrice.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtPrice.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtPrice.setOpaque(false);
+        txtPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPriceActionPerformed(evt);
+            }
+        });
+
+        txtRp.setEditable(false);
+        txtRp.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtRp.setForeground(new java.awt.Color(240, 244, 248));
+        txtRp.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtRp.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtRp.setOpaque(false);
+
+        txtTtax.setEditable(false);
+        txtTtax.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtTtax.setForeground(new java.awt.Color(240, 244, 248));
+        txtTtax.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtTtax.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTtax.setOpaque(false);
+
+        txtTpay.setEditable(false);
+        txtTpay.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtTpay.setForeground(new java.awt.Color(240, 244, 248));
+        txtTpay.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtTpay.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTpay.setOpaque(false);
+
+        txtShip.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtShip.setForeground(new java.awt.Color(240, 244, 248));
+        txtShip.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtShip.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtShip.setOpaque(false);
+        txtShip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtShipActionPerformed(evt);
+            }
+        });
+
+        txtTax.setEditable(false);
+        txtTax.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtTax.setForeground(new java.awt.Color(240, 244, 248));
+        txtTax.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtTax.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTax.setOpaque(false);
+
+        txtVat.setEditable(false);
+        txtVat.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        txtVat.setForeground(new java.awt.Color(240, 244, 248));
+        txtVat.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtVat.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtVat.setOpaque(false);
+
+        jLabel10.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel10.setText("$");
+
+        jLabel11.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(240, 244, 248));
+        jLabel11.setText("$");
+
+        jButton1.setBackground(new java.awt.Color(240, 244, 248));
+        jButton1.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(68, 68, 68));
+        jButton1.setText("Count");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        btnReset.setBackground(new java.awt.Color(240, 244, 248));
+        btnReset.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(68, 68, 68));
+        btnReset.setText("Reset");
+        btnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,22 +234,56 @@ public class CustomsCalc extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
-                        .addComponent(btnExit)
-                        .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnExit))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(26, 26, 26)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnBack)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnInfo)
-                                .addGap(23, 23, 23))))))
+                                .addGap(16, 16, 16))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel9))
+                                    .addComponent(jLabel2))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(selectType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtRp)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(34, 34, 34)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel5)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel6))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtTax)
+                                            .addComponent(txtVat)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(txtShip, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel11)
+                                                .addGap(0, 30, Short.MAX_VALUE))))
+                                    .addComponent(txtTtax)
+                                    .addComponent(txtTpay)))
+                            .addComponent(jLabel4)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnReset)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,8 +295,36 @@ public class CustomsCalc extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                    .addComponent(selectType, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtShip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtTax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtRp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6)
+                    .addComponent(txtVat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTtax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTpay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(btnReset))
+                .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnBack)
                     .addComponent(btnInfo))
@@ -145,10 +345,69 @@ public class CustomsCalc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
+        
+        String valueType = selectType.getSelectedItem().toString();
+        double valueTax=0.0;
+        double valueVat=0.0;
+        
+        String price = txtPrice.getText();
+        String ship = txtShip.getText();
+        double priceDouble = Double.parseDouble(price);
+        double shipDouble = Double.parseDouble(ship);
+        priceDouble+=shipDouble;
+        
+//      Konversi Dollar ke Rp
+        double idrPrice = priceDouble * 14310.04;
+        DecimalFormat formatter = new DecimalFormat("#0.00");
+        String result = formatter.format(idrPrice);
+        txtRp.setText("Rp. " + result);
+        
+//        Tax
+        if(valueType.equalsIgnoreCase("common")){
+            double tax = idrPrice *0.075;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }else if(valueType.equalsIgnoreCase("Textile / Bag")){
+            double tax = idrPrice *0.15;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }else if (valueType.equalsIgnoreCase("Shoes")) {
+            double tax = idrPrice *0.25;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }
+
+        
+//        VAT 
+        double resultVat = idrPrice * 0.10;
+        String resultVatFormat = formatter.format(resultVat);
+        txtVat.setText("Rp. " + resultVatFormat);
+        idrPrice += resultVat;
+        valueVat += resultVat;
+        
+//        Total Tax
+        
+        double totalTax = valueTax + valueVat;
+        String resultTotaltax = formatter.format(totalTax);
+        txtTtax.setText("Rp. " + resultTotaltax);
+        
+//        Payment Total
+        double totalPay = idrPrice;
+        String totalPayF = formatter.format(totalPay);
+        txtTpay.setText("Rp. " + totalPayF);
+    }//GEN-LAST:event_txtPriceActionPerformed
+
+    private void btnInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_btnExitActionPerformed
+        JOptionPane.showMessageDialog(this, "COMMON 7,5%" + "\nTextile/Bag - 15%"+ "\nShoes - 25%" + "\nVAT - 10%" + "\nExchange Rate - Rp.14310.04");
+    }//GEN-LAST:event_btnInfoActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -157,10 +416,138 @@ public class CustomsCalc extends javax.swing.JFrame {
         CustomsCalc.this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Can only exchange between Dollars and Rupiah");
-    }//GEN-LAST:event_btnInfoActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void txtShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtShipActionPerformed
+        String valueType = selectType.getSelectedItem().toString();
+        double valueTax=0.0;
+        double valueVat=0.0;
+        
+        String price = txtPrice.getText();
+        String ship = txtShip.getText();
+        double priceDouble = Double.parseDouble(price);
+        double shipDouble = Double.parseDouble(ship);
+        priceDouble+=shipDouble;
+        
+//      Konversi Dollar ke Rp
+        double idrPrice = priceDouble * 14310.04;
+        DecimalFormat formatter = new DecimalFormat("#0.00");
+        String result = formatter.format(idrPrice);
+        txtRp.setText("Rp. " + result);
+        
+//        Tax
+        if(valueType.equalsIgnoreCase("common")){
+            double tax = idrPrice *0.075;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }else if(valueType.equalsIgnoreCase("Textile / Bag")){
+            double tax = idrPrice *0.15;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }else if (valueType.equalsIgnoreCase("Shoes")) {
+            double tax = idrPrice *0.25;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }
+
+        
+//        VAT 
+        double resultVat = idrPrice * 0.10;
+        String resultVatFormat = formatter.format(resultVat);
+        txtVat.setText("Rp. " + resultVatFormat);
+        idrPrice += resultVat;
+        valueVat += resultVat;
+        
+//        Total Tax
+        
+        double totalTax = valueTax + valueVat;
+        String resultTotaltax = formatter.format(totalTax);
+        txtTtax.setText("Rp. " + resultTotaltax);
+        
+//        Payment Total
+        double totalPay = idrPrice;
+        String totalPayF = formatter.format(totalPay);
+        txtTpay.setText("Rp. " + totalPayF);
+    }//GEN-LAST:event_txtShipActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+        txtPrice.setText("");
+        txtRp.setText("");
+        txtShip.setText("");
+        txtTax.setText("");
+        txtVat.setText("");
+        txtTtax.setText("");
+        txtTpay.setText("");
+        selectType.setSelectedIndex(0);
+    }//GEN-LAST:event_btnResetActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String valueType = selectType.getSelectedItem().toString();
+        double valueTax=0.0;
+        double valueVat=0.0;
+        
+        String price = txtPrice.getText();
+        String ship = txtShip.getText();
+        double priceDouble = Double.parseDouble(price);
+        double shipDouble = Double.parseDouble(ship);
+        priceDouble+=shipDouble;
+        
+//      Konversi Dollar ke Rp
+        double idrPrice = priceDouble * 14310.04;
+        DecimalFormat formatter = new DecimalFormat("#0.00");
+        String result = formatter.format(idrPrice);
+        txtRp.setText("Rp. " + result);
+        
+//        Tax
+        if(valueType.equalsIgnoreCase("common")){
+            double tax = idrPrice *0.075;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }else if(valueType.equalsIgnoreCase("Textile / Bag")){
+            double tax = idrPrice *0.15;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }else if (valueType.equalsIgnoreCase("Shoes")) {
+            double tax = idrPrice *0.25;
+            String resultTax = formatter.format(tax);
+            txtTax.setText("Rp. " + resultTax);
+            idrPrice += tax;
+            valueTax += tax;
+        }
+
+        
+//        VAT 
+        double resultVat = idrPrice * 0.10;
+        String resultVatFormat = formatter.format(resultVat);
+        txtVat.setText("Rp. " + resultVatFormat);
+        idrPrice += resultVat;
+        valueVat += resultVat;
+        
+//        Total Tax
+        
+        double totalTax = valueTax + valueVat;
+        String resultTotaltax = formatter.format(totalTax);
+        txtTtax.setText("Rp. " + resultTotaltax);
+        
+//        Payment Total
+        double totalPay = idrPrice;
+        String totalPayF = formatter.format(totalPay);
+        txtTpay.setText("Rp. " + totalPayF);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,10 +589,28 @@ public class CustomsCalc extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnInfo;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton btnReset;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox selectType;
+    private javax.swing.JTextField txtPrice;
+    private javax.swing.JTextField txtRp;
+    private javax.swing.JTextField txtShip;
+    private javax.swing.JTextField txtTax;
+    private javax.swing.JTextField txtTpay;
+    private javax.swing.JTextField txtTtax;
+    private javax.swing.JTextField txtVat;
     // End of variables declaration//GEN-END:variables
 }
 
