@@ -106,6 +106,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
 
         btnEnter.setBackground(new java.awt.Color(188, 204, 220));
         btnEnter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(6).png"))); // NOI18N
+        btnEnter.setToolTipText("Count");
         btnEnter.setBorder(null);
         btnEnter.setBorderPainted(false);
         btnEnter.setContentAreaFilled(false);
@@ -118,6 +119,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
 
         BtnEnter2.setBackground(new java.awt.Color(188, 204, 220));
         BtnEnter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(6).png"))); // NOI18N
+        BtnEnter2.setToolTipText("Count");
         BtnEnter2.setBorder(null);
         BtnEnter2.setBorderPainted(false);
         BtnEnter2.setContentAreaFilled(false);
@@ -140,6 +142,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         });
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(7).png"))); // NOI18N
+        btnBack.setToolTipText("Back to menu");
         btnBack.setBorder(null);
         btnBack.setBorderPainted(false);
         btnBack.setContentAreaFilled(false);
@@ -151,6 +154,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         });
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(9).png"))); // NOI18N
+        btnInfo.setToolTipText("Info");
         btnInfo.setBorder(null);
         btnInfo.setBorderPainted(false);
         btnInfo.setContentAreaFilled(false);

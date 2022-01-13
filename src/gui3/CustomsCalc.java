@@ -80,6 +80,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         });
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(7).png"))); // NOI18N
+        btnBack.setToolTipText("Back to menu");
         btnBack.setBorder(null);
         btnBack.setBorderPainted(false);
         btnBack.setContentAreaFilled(false);
@@ -91,6 +92,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         });
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(9).png"))); // NOI18N
+        btnInfo.setToolTipText("Info");
         btnInfo.setBorder(null);
         btnInfo.setBorderPainted(false);
         btnInfo.setContentAreaFilled(false);
@@ -210,6 +212,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         btnCount.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         btnCount.setForeground(new java.awt.Color(68, 68, 68));
         btnCount.setText("Count");
+        btnCount.setToolTipText("Count Customs");
         btnCount.setBorder(null);
         btnCount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCount.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +225,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         btnReset.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         btnReset.setForeground(new java.awt.Color(68, 68, 68));
         btnReset.setText("Reset");
+        btnReset.setToolTipText("Reset field");
         btnReset.setBorder(null);
         btnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReset.addActionListener(new java.awt.event.ActionListener() {
