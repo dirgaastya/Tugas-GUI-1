@@ -18,6 +18,7 @@ public class GUI3 {
         // TODO code application logic here
         Home b = new Home();
         CustomsCalc c = new CustomsCalc();
+        ConfirmDialog a = new ConfirmDialog();
         
         
         b.setVisible(true);

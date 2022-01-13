@@ -54,20 +54,21 @@ public class CustomsCalc extends javax.swing.JFrame {
         txtVat = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnCount = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(16, 42, 67));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(36, 59, 83)));
 
         jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 244, 248));
         jLabel1.setText("estimated customs calculation");
         jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
 
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/728918_cancel_error_exit_fault_alert_icon.png"))); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(11).png"))); // NOI18N
         btnExit.setBorder(null);
         btnExit.setBorderPainted(false);
         btnExit.setContentAreaFilled(false);
@@ -141,6 +142,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         txtPrice.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtPrice.setForeground(new java.awt.Color(240, 244, 248));
         txtPrice.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtPrice.setCaretColor(new java.awt.Color(240, 244, 248));
         txtPrice.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtPrice.setOpaque(false);
         txtPrice.addActionListener(new java.awt.event.ActionListener() {
@@ -153,26 +155,27 @@ public class CustomsCalc extends javax.swing.JFrame {
         txtRp.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtRp.setForeground(new java.awt.Color(240, 244, 248));
         txtRp.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
-        txtRp.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtRp.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtRp.setOpaque(false);
 
         txtTtax.setEditable(false);
         txtTtax.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtTtax.setForeground(new java.awt.Color(240, 244, 248));
         txtTtax.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
-        txtTtax.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTtax.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtTtax.setOpaque(false);
 
         txtTpay.setEditable(false);
         txtTpay.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtTpay.setForeground(new java.awt.Color(240, 244, 248));
         txtTpay.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
-        txtTpay.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTpay.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtTpay.setOpaque(false);
 
         txtShip.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtShip.setForeground(new java.awt.Color(240, 244, 248));
         txtShip.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtShip.setCaretColor(new java.awt.Color(240, 244, 248));
         txtShip.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtShip.setOpaque(false);
         txtShip.addActionListener(new java.awt.event.ActionListener() {
@@ -185,14 +188,14 @@ public class CustomsCalc extends javax.swing.JFrame {
         txtTax.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtTax.setForeground(new java.awt.Color(240, 244, 248));
         txtTax.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
-        txtTax.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTax.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtTax.setOpaque(false);
 
         txtVat.setEditable(false);
         txtVat.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtVat.setForeground(new java.awt.Color(240, 244, 248));
         txtVat.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
-        txtVat.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtVat.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtVat.setOpaque(false);
 
         jLabel10.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
@@ -203,14 +206,15 @@ public class CustomsCalc extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(240, 244, 248));
         jLabel11.setText("$");
 
-        jButton1.setBackground(new java.awt.Color(240, 244, 248));
-        jButton1.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(68, 68, 68));
-        jButton1.setText("Count");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCount.setBackground(new java.awt.Color(240, 244, 248));
+        btnCount.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+        btnCount.setForeground(new java.awt.Color(68, 68, 68));
+        btnCount.setText("Count");
+        btnCount.setBorder(null);
+        btnCount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCountActionPerformed(evt);
             }
         });
 
@@ -218,6 +222,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         btnReset.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         btnReset.setForeground(new java.awt.Color(68, 68, 68));
         btnReset.setText("Reset");
+        btnReset.setBorder(null);
         btnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,15 +279,15 @@ public class CustomsCalc extends javax.swing.JFrame {
                                                 .addComponent(txtShip, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel11)
-                                                .addGap(0, 30, Short.MAX_VALUE))))
+                                                .addGap(0, 24, Short.MAX_VALUE))))
                                     .addComponent(txtTtax)
                                     .addComponent(txtTpay)))
                             .addComponent(jLabel4)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnReset)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)))
+                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCount, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -322,7 +327,7 @@ public class CustomsCalc extends javax.swing.JFrame {
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnCount)
                     .addComponent(btnReset))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -417,13 +422,8 @@ public class CustomsCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-       int option = JOptionPane.showConfirmDialog(null, "Do you want to exit the program ?","Application",JOptionPane.YES_NO_OPTION);
-        switch(option){
-            case JOptionPane.YES_OPTION:
-                System.exit(0);
-            case JOptionPane.NO_OPTION:
-                break;
-        }
+       ConfirmDialog a = new ConfirmDialog();
+       a.setVisible(true);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void txtShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtShipActionPerformed
@@ -496,7 +496,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         selectType.setSelectedIndex(0);
     }//GEN-LAST:event_btnResetActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCountActionPerformed
         String valueType = selectType.getSelectedItem().toString();
         double valueTax=0.0;
         double valueVat=0.0;
@@ -552,7 +552,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         double totalPay = idrPrice;
         String totalPayF = formatter.format(totalPay);
         txtTpay.setText("Rp. " + totalPayF);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnCountActionPerformed
 
     /**
      * @param args the command line arguments
@@ -592,10 +592,10 @@ public class CustomsCalc extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCount;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnInfo;
     private javax.swing.JButton btnReset;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

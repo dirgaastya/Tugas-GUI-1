@@ -7,7 +7,6 @@ package gui3;
 
 import javax.swing.JOptionPane;
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 
 /**
  *
@@ -52,6 +51,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(16, 42, 67));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(36, 59, 83)));
 
         jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 244, 248));
@@ -63,6 +63,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         txtRp1.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtRp1.setForeground(new java.awt.Color(240, 244, 248));
         txtRp1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtRp1.setCaretColor(new java.awt.Color(240, 244, 248));
         txtRp1.setOpaque(false);
         txtRp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +78,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         txtDollar1.setForeground(new java.awt.Color(240, 244, 248));
         txtDollar1.setText("$");
         txtDollar1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtDollar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtDollar1.setOpaque(false);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/indonesian-rupiah.png"))); // NOI18N
@@ -84,6 +86,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         txtDollar2.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         txtDollar2.setForeground(new java.awt.Color(240, 244, 248));
         txtDollar2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtDollar2.setCaretColor(new java.awt.Color(240, 244, 248));
         txtDollar2.setOpaque(false);
         txtDollar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +101,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
         txtRp2.setForeground(new java.awt.Color(240, 244, 248));
         txtRp2.setText("Rp. ");
         txtRp2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(240, 244, 248)));
+        txtRp2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtRp2.setOpaque(false);
 
         btnEnter.setBackground(new java.awt.Color(188, 204, 220));
@@ -124,7 +128,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
             }
         });
 
-        btnExit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Taufik Yahya\\Downloads\\728918_cancel_error_exit_fault_alert_icon.png")); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui3/img/image(11).png"))); // NOI18N
         btnExit.setBorder(null);
         btnExit.setBorderPainted(false);
         btnExit.setContentAreaFilled(false);
@@ -175,7 +179,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtRp1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                                 .addComponent(jLabel5)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtDollar1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -214,7 +218,7 @@ public class CurrencyConverter extends javax.swing.JFrame {
                             .addComponent(btnEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel2)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3)
@@ -254,13 +258,8 @@ public class CurrencyConverter extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        int option = JOptionPane.showConfirmDialog(null, "Do you want to exit the program ?","Application",JOptionPane.YES_NO_OPTION);
-        switch(option){
-            case JOptionPane.YES_OPTION:
-                System.exit(0);
-            case JOptionPane.NO_OPTION:
-                break;
-        }
+        ConfirmDialog a = new ConfirmDialog();
+        a.setVisible(true);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoActionPerformed
