@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package gui3;
-
+    
 /**
  *
  * @author Taufik Yahya
@@ -16,12 +16,8 @@ public class GUI3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Home b = new Home();
-        CustomsCalc c = new CustomsCalc();
-        ConfirmDialog a = new ConfirmDialog();
-        
-        
-        b.setVisible(true);
+        Home home = new Home();
+        home.setVisible(true);
     }
     
 }

@@ -110,7 +110,7 @@ public class CustomsCalc extends javax.swing.JFrame {
         selectType.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
         selectType.setForeground(new java.awt.Color(68, 68, 68));
         selectType.setMaximumRowCount(3);
-        selectType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Common", "Textile / Bag", "Shoes" }));
+        selectType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "Common", "Textile / Bag", "Shoes" }));
         selectType.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel3.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
@@ -355,62 +355,7 @@ public class CustomsCalc extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
-        
-        String valueType = selectType.getSelectedItem().toString();
-        double valueTax=0.0;
-        double valueVat=0.0;
-        
-        String price = txtPrice.getText();
-        String ship = txtShip.getText();
-        double priceDouble = Double.parseDouble(price);
-        double shipDouble = Double.parseDouble(ship);
-        priceDouble+=shipDouble;
-        
-//      Konversi Dollar ke Rp
-        double idrPrice = priceDouble * 14310.04;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String result = formatter.format(idrPrice);
-        txtRp.setText("Rp. " + result);
-        
-//        Tax
-        if(valueType.equalsIgnoreCase("common")){
-            double tax = idrPrice *0.075;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }else if(valueType.equalsIgnoreCase("Textile / Bag")){
-            double tax = idrPrice *0.15;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }else if (valueType.equalsIgnoreCase("Shoes")) {
-            double tax = idrPrice *0.25;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }
-
-        
-//        VAT 
-        double resultVat = idrPrice * 0.10;
-        String resultVatFormat = formatter.format(resultVat);
-        txtVat.setText("Rp. " + resultVatFormat);
-        idrPrice += resultVat;
-        valueVat += resultVat;
-        
-//        Total Tax
-        
-        double totalTax = valueTax + valueVat;
-        String resultTotaltax = formatter.format(totalTax);
-        txtTtax.setText("Rp. " + resultTotaltax);
-        
-//        Payment Total
-        double totalPay = idrPrice;
-        String totalPayF = formatter.format(totalPay);
-        txtTpay.setText("Rp. " + totalPayF);
+        btnCountActionPerformed(evt);
     }//GEN-LAST:event_txtPriceActionPerformed
 
     private void btnInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoActionPerformed
@@ -431,61 +376,7 @@ public class CustomsCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void txtShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtShipActionPerformed
-        String valueType = selectType.getSelectedItem().toString();
-        double valueTax=0.0;
-        double valueVat=0.0;
-        
-        String price = txtPrice.getText();
-        String ship = txtShip.getText();
-        double priceDouble = Double.parseDouble(price);
-        double shipDouble = Double.parseDouble(ship);
-        priceDouble+=shipDouble;
-        
-//      Konversi Dollar ke Rp
-        double idrPrice = priceDouble * 14310.04;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String result = formatter.format(idrPrice);
-        txtRp.setText("Rp. " + result);
-        
-//        Tax
-        if(valueType.equalsIgnoreCase("common")){
-            double tax = idrPrice *0.075;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }else if(valueType.equalsIgnoreCase("Textile / Bag")){
-            double tax = idrPrice *0.15;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }else if (valueType.equalsIgnoreCase("Shoes")) {
-            double tax = idrPrice *0.25;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }
-
-        
-//        VAT 
-        double resultVat = idrPrice * 0.10;
-        String resultVatFormat = formatter.format(resultVat);
-        txtVat.setText("Rp. " + resultVatFormat);
-        idrPrice += resultVat;
-        valueVat += resultVat;
-        
-//        Total Tax
-        
-        double totalTax = valueTax + valueVat;
-        String resultTotaltax = formatter.format(totalTax);
-        txtTtax.setText("Rp. " + resultTotaltax);
-        
-//        Payment Total
-        double totalPay = idrPrice;
-        String totalPayF = formatter.format(totalPay);
-        txtTpay.setText("Rp. " + totalPayF);
+        btnCountActionPerformed(evt);
     }//GEN-LAST:event_txtShipActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
@@ -501,61 +392,68 @@ public class CustomsCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCountActionPerformed
-        String valueType = selectType.getSelectedItem().toString();
-        double valueTax=0.0;
-        double valueVat=0.0;
-        
-        String price = txtPrice.getText();
-        String ship = txtShip.getText();
-        double priceDouble = Double.parseDouble(price);
-        double shipDouble = Double.parseDouble(ship);
-        priceDouble+=shipDouble;
-        
-//      Konversi Dollar ke Rp
-        double idrPrice = priceDouble * 14310.04;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String result = formatter.format(idrPrice);
-        txtRp.setText("Rp. " + result);
-        
-//        Tax
-        if(valueType.equalsIgnoreCase("common")){
-            double tax = idrPrice *0.075;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }else if(valueType.equalsIgnoreCase("Textile / Bag")){
-            double tax = idrPrice *0.15;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }else if (valueType.equalsIgnoreCase("Shoes")) {
-            double tax = idrPrice *0.25;
-            String resultTax = formatter.format(tax);
-            txtTax.setText("Rp. " + resultTax);
-            idrPrice += tax;
-            valueTax += tax;
-        }
+        try {
+            String valueType = selectType.getSelectedItem().toString();
+            double valueTax=0.0;
+            double valueVat=0.0;
 
+            String price = txtPrice.getText();
+            String ship = txtShip.getText();
+            double priceDouble = Double.parseDouble(price);
+            double shipDouble = Double.parseDouble(ship);
+            priceDouble+=shipDouble;
+
+    //      Konversi Dollar ke Rp
+            double idrPrice = priceDouble * 14310.04;
+            DecimalFormat formatter = new DecimalFormat("#0.00");
+            String result = formatter.format(idrPrice);
+            txtRp.setText("Rp. " + result);
+
+    //        Tax
+            if(valueType.equalsIgnoreCase("common")){
+                double tax = idrPrice *0.075;
+                String resultTax = formatter.format(tax);
+                txtTax.setText("Rp. " + resultTax);
+                idrPrice += tax;
+                valueTax += tax;
+            }else if(valueType.equalsIgnoreCase("Textile / Bag")){
+                double tax = idrPrice *0.15;
+                String resultTax = formatter.format(tax);
+                txtTax.setText("Rp. " + resultTax);
+                idrPrice += tax;
+                valueTax += tax;
+            }else if (valueType.equalsIgnoreCase("Shoes")) {
+                double tax = idrPrice *0.25;
+                String resultTax = formatter.format(tax);
+                txtTax.setText("Rp. " + resultTax);
+                idrPrice += tax;
+                valueTax += tax;
+            }else{
+                JOptionPane.showMessageDialog(this, "Please select the option");
+            }
+
+
+    //        VAT 
+            double resultVat = idrPrice * 0.10;
+            String resultVatFormat = formatter.format(resultVat);
+            txtVat.setText("Rp. " + resultVatFormat);
+            idrPrice += resultVat;
+            valueVat += resultVat;
+
+    //        Total Tax
+
+            double totalTax = valueTax + valueVat;
+            String resultTotaltax = formatter.format(totalTax);
+            txtTtax.setText("Rp. " + resultTotaltax);
+
+    //        Payment Total
+            double totalPay = idrPrice;
+            String totalPayF = formatter.format(totalPay);
+            txtTpay.setText("Rp. " + totalPayF);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage()+"\nCan only filled by Number");
+        }
         
-//        VAT 
-        double resultVat = idrPrice * 0.10;
-        String resultVatFormat = formatter.format(resultVat);
-        txtVat.setText("Rp. " + resultVatFormat);
-        idrPrice += resultVat;
-        valueVat += resultVat;
-        
-//        Total Tax
-        
-        double totalTax = valueTax + valueVat;
-        String resultTotaltax = formatter.format(totalTax);
-        txtTtax.setText("Rp. " + resultTotaltax);
-        
-//        Payment Total
-        double totalPay = idrPrice;
-        String totalPayF = formatter.format(totalPay);
-        txtTpay.setText("Rp. " + totalPayF);
     }//GEN-LAST:event_btnCountActionPerformed
 
     /**

@@ -273,52 +273,45 @@ public class CurrencyConverter extends javax.swing.JFrame {
 
     private void txtRp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRp1ActionPerformed
         // TODO add your handling code here:
-        String a = txtRp1.getText();
-        
-        int rpOne = Integer.parseInt(a);
-//        Hitung dan merubah format Decimal menggunakan DecimalFormat
-        Double result = rpOne * 0.00007;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String resultStr = formatter.format(result);
+        try {
+            String a = txtRp1.getText();
+            int rpOne = Integer.parseInt(a);
+            
+            //Hitung dan merubah format Decimal menggunakan DecimalFormat
+            Double result = rpOne * 0.00007;
+            DecimalFormat formatter = new DecimalFormat("#0.00");
+            String resultStr = formatter.format(result);
   
-        txtDollar1.setText("$ " + resultStr);
+            txtDollar1.setText("$ " + resultStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this,e.getMessage()+"\nCan only filled by Number");
+        }
     }//GEN-LAST:event_txtRp1ActionPerformed
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
         // TODO add your handling code here:
-        
-        String a = txtRp1.getText();
-        
-        int rpOne = Integer.parseInt(a);
-//        Hitung dan merubah format Decimal menggunakan DecimalFormat
-        Double result = rpOne * 0.00007;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String resultStr = formatter.format(result);
-  
-        txtDollar1.setText("$ " + resultStr);
+        txtRp1ActionPerformed(evt);
     }//GEN-LAST:event_btnEnterActionPerformed
 
     private void BtnEnter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEnter2ActionPerformed
         // TODO add your handling code here:
-        String a = txtDollar2.getText();
+        try {
+            String a = txtDollar2.getText();
         
-        double dollar=Double.parseDouble(a);
+            double dollar=Double.parseDouble(a);
+
+            Double result = dollar * 14310.04;
+            DecimalFormat formatter = new DecimalFormat("#0.00");
+            String resultStr = formatter.format(result);
+            txtRp2.setText("RP. " + resultStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage()+"\nCan only filled by Number");
+        }
         
-        Double result = dollar * 14310.04;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String resultStr = formatter.format(result);
-        txtRp2.setText("RP. " + resultStr);
     }//GEN-LAST:event_BtnEnter2ActionPerformed
 
     private void txtDollar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDollar2ActionPerformed
-        String a = txtDollar2.getText();
-        
-        double dollar=Double.parseDouble(a);
-        
-        Double result = dollar * 14310.04;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
-        String resultStr = formatter.format(result);
-        txtRp2.setText("RP. " + resultStr);
+        BtnEnter2ActionPerformed(evt);
     }//GEN-LAST:event_txtDollar2ActionPerformed
 
     /**

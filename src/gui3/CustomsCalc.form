@@ -277,10 +277,11 @@
             </Property>
             <Property name="maximumRowCount" type="int" value="3"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="Common"/>
-                <StringItem index="1" value="Textile / Bag"/>
-                <StringItem index="2" value="Shoes"/>
+              <StringArray count="4">
+                <StringItem index="0" value="Select"/>
+                <StringItem index="1" value="Common"/>
+                <StringItem index="2" value="Textile / Bag"/>
+                <StringItem index="3" value="Shoes"/>
               </StringArray>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
